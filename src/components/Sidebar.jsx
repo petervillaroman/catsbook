@@ -1,16 +1,72 @@
 /** @format */
 
 import React from 'react';
-import { Box } from '@mui/material';
-
+import {
+	Box,
+	List,
+	ListItem,
+	ListItemButton,
+	ListItemIcon,
+	ListItemText,
+	Switch,
+} from '@mui/material';
+import { DarkMode, Face, Home, People, Storefront } from '@mui/icons-material';
+import SettingsIcon from '@mui/icons-material/Settings';
 export const Sidebar = () => {
 	return (
-		<Box
-			backgroundColor='green'
-			flex={1}
-			p={2}
-			sx={{ display: { xs: 'none', sm: 'block' } }}>
-			Sidebar
+		<Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
+			<Box position='fixed'>
+				<List>
+					<ListItem disablePadding>
+						<ListItemButton component='a' href='#home'>
+							<ListItemIcon>
+								<Home />
+							</ListItemIcon>
+							<ListItemText primary='Homepage ' />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component='a' href='#profile'>
+							<ListItemIcon>
+								<Face />
+							</ListItemIcon>
+							<ListItemText primary='Profile ' />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component='a' href='#contacts'>
+							<ListItemIcon>
+								<People />
+							</ListItemIcon>
+							<ListItemText primary='Contacts ' />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component='a' href='#market'>
+							<ListItemIcon>
+								<Storefront />
+							</ListItemIcon>
+							<ListItemText primary='Marketplace ' />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component='a' href='#settings'>
+							<ListItemIcon>
+								<SettingsIcon />
+							</ListItemIcon>
+							<ListItemText primary='Settings ' />
+						</ListItemButton>
+					</ListItem>
+					<ListItem disablePadding>
+						<ListItemButton component='a' href='#settings'>
+							<ListItemIcon>
+								<DarkMode />
+							</ListItemIcon>
+							<Switch />
+						</ListItemButton>
+					</ListItem>
+				</List>
+			</Box>
 		</Box>
 	);
 };
