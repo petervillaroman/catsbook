@@ -1,7 +1,12 @@
 /** @format */
 
 import React from 'react';
+import { Box } from '@mui/material';
 
 export const Rightbar = () => {
-	return <div>Rightbar</div>;
+	return (
+		<Box backgroundColor='pink' flex={2} p={2}>
+			Rightbar
+		</Box>
+	);
 };

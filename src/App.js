@@ -10,10 +10,10 @@ function App() {
 	return (
 		<Box>
 			{/* <NavBar /> */}
-			<Stack direction='row'>
+			<Stack direction='row' spacing={2} justifyContent='space-evenly '>
+				<Sidebar />
 				<Feed />
 				<Rightbar />
-				<Sidebar />
 			</Stack>
 		</Box>
 	);
