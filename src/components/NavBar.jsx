@@ -5,6 +5,8 @@ import {
 	Avatar,
 	Badge,
 	InputBase,
+	Menu,
+	MenuItem,
 	Toolbar,
 	Typography,
 } from '@mui/material';
@@ -78,6 +80,22 @@ export const NavBar = () => {
 					<Typography>KP</Typography>
 				</UserBox>
 			</StyledToolbar>
+			<Menu
+				id='demo-positioned-menu'
+				aria-labelledby='demo-positioned-button'
+				open={true}
+				anchorOrigin={{
+					vertical: 'top',
+					horizontal: 'right',
+				}}
+				transformOrigin={{
+					vertical: 'top',
+					horizontal: 'right',
+				}}>
+				<MenuItem>Profile</MenuItem>
+				<MenuItem>My account</MenuItem>
+				<MenuItem>Logout</MenuItem>
+			</Menu>
 		</AppBar>
 	);
 };
