@@ -1,10 +1,26 @@
 /** @format */
 
-import { Button, Typography } from '@mui/material';
+import { Button, styled, Typography } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Add } from '@mui/icons-material';
 
 function App() {
+	// we took our sx={{}} prop style and created a style component.
+	// we just declare a variable and set it any MUI component or HTML element.
+	//  const StyleComponent = styled(MUI/HTML)({})
+	const BlueButton = styled(Button)({
+		backgroundColor: 'skyblue',
+		color: '#888',
+		margin: 5,
+		'&:hover': {
+			backgroundColor: 'lightblue',
+		},
+		'&:disabled': {
+			backgroundColor: 'gray',
+			color: 'white',
+		},
+	});
+
 	return (
 		<div className='App'>
 			<Button variant='text'>Text</Button>
@@ -29,18 +45,8 @@ function App() {
 
 			{/* This button is styled using the sx property. Apparently you can do such things as hover effects
     using the sx property. I don't fully know how to do it yet but, it's nice to know you can.  */}
-			<Button
-				variant='contained'
-				sx={{
-					backgroundColor: 'skyblue',
-					color: '#888',
-					m: 5,
-					'&:hover': {
-						backgroundColor: 'lightblue',
-					},
-				}}>
-				My Unique Button
-			</Button>
+			<BlueButton> Button</BlueButton>
+			<BlueButton> Another Button</BlueButton>
 		</div>
 	);
 }
