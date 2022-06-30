@@ -26,9 +26,21 @@ const Search = styled('div')(({ theme }) => ({
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
-	display: 'flex',
+	display: 'none',
 	gap: '20px',
 	alignItems: 'center',
+	[theme.breakpoints.up('sm')]: {
+		display: 'flex',
+	},
+}));
+
+const UserBox = styled(Box)(({ theme }) => ({
+	display: 'flex',
+	gap: '10px',
+	alignItems: 'center',
+	[theme.breakpoints.up('sm')]: {
+		display: 'none',
+	},
 }));
 
 export const NavBar = () => {
@@ -58,6 +70,13 @@ export const NavBar = () => {
 						src='https://i.imgur.com/M2UFQ68.jpg'
 					/>
 				</Icons>
+				<UserBox>
+					<Avatar
+						sx={{ height: '30', width: '30' }}
+						src='https://i.imgur.com/M2UFQ68.jpg'
+					/>
+					<Typography>KP</Typography>
+				</UserBox>
 			</StyledToolbar>
 		</AppBar>
 	);
