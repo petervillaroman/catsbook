@@ -10,9 +10,9 @@ import {
 	Toolbar,
 	Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material';
-import { Block, Mail, Notifications } from '@mui/icons-material';
+import { Mail, Notifications } from '@mui/icons-material';
 import { Box } from '@mui/material';
 
 const StyledToolbar = styled(Toolbar)({
@@ -46,6 +46,8 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 export const NavBar = () => {
+	const [open, setOpen] = useState(false);
+
 	return (
 		<AppBar position='sticky'>
 			<StyledToolbar>
@@ -70,9 +72,10 @@ export const NavBar = () => {
 					<Avatar
 						sx={{ height: '30', width: '30' }}
 						src='https://i.imgur.com/M2UFQ68.jpg'
+						onClick={(e) => setOpen(true)}
 					/>
 				</Icons>
-				<UserBox>
+				<UserBox onClick={(e) => setOpen(true)}>
 					<Avatar
 						sx={{ height: '30', width: '30' }}
 						src='https://i.imgur.com/M2UFQ68.jpg'
@@ -83,7 +86,8 @@ export const NavBar = () => {
 			<Menu
 				id='demo-positioned-menu'
 				aria-labelledby='demo-positioned-button'
-				open={true}
+				open={open}
+				onClose={(e) => setOpen(false)}
 				anchorOrigin={{
 					vertical: 'top',
 					horizontal: 'right',
