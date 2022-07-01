@@ -5,6 +5,7 @@ import { Feed } from './components/Feed';
 import { NavBar } from './components/NavBar';
 import { Rightbar } from './components/Rightbar';
 import { Sidebar } from './components/Sidebar';
+import Add from './components/Add';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<Feed />
 				<Rightbar />
 			</Stack>
+			<Add />
 		</Box>
 	);
 }
