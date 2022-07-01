@@ -12,6 +12,8 @@ import {
 } from '@mui/material';
 import { DarkMode, Face, Home, People, Storefront } from '@mui/icons-material';
 import SettingsIcon from '@mui/icons-material/Settings';
+
+// this is where we receive our state, we pass it into our export's parameter parens. ({state, setState})
 export const Sidebar = ({ mode, setMode }) => {
 	return (
 		<Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -62,6 +64,8 @@ export const Sidebar = ({ mode, setMode }) => {
 							<ListItemIcon>
 								<DarkMode />
 							</ListItemIcon>
+							{/* Finally this is where we use our setState and state hooks as the
+							event result of an onClick listener. SIMPLE! : ) */}
 							<Switch
 								onClick={(e) =>
 									setMode(mode === 'light' ? 'dark' : 'light')
