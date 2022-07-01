@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import { DarkMode, Face, Home, People, Storefront } from '@mui/icons-material';
 import SettingsIcon from '@mui/icons-material/Settings';
-export const Sidebar = () => {
+export const Sidebar = ({ mode, setMode }) => {
 	return (
 		<Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
 			<Box position='fixed'>
@@ -62,7 +62,11 @@ export const Sidebar = () => {
 							<ListItemIcon>
 								<DarkMode />
 							</ListItemIcon>
-							<Switch />
+							<Switch
+								onClick={(e) =>
+									setMode(mode === 'light' ? 'dark' : 'light')
+								}
+							/>
 						</ListItemButton>
 					</ListItem>
 				</List>
