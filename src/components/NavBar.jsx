@@ -54,7 +54,7 @@ export const NavBar = () => {
 				<Typography
 					variant='h6'
 					sx={{ display: { xs: 'none', sm: 'block' } }}>
-					KP Villaroman
+					Meowsbook
 				</Typography>
 				<AirlineSeatLegroomReducedIcon
 					sx={{ display: { xs: 'block', sm: 'none' } }}

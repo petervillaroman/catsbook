@@ -40,9 +40,9 @@ function Post() {
 			/>
 			<CardContent>
 				<Typography variant='body2' color='text.secondary'>
-					This impressive coder is a perfect personality hire and a fun
-					coworker to code together with your clients. Add 1 bowl of
-					react.js along with MUI5, if you like.
+					This coffee was great! It gave me the ability and focus required
+					to create this semi-interactive and responsive website. Try the
+					Dark/Light button, it should switch things up a bit!
 				</Typography>
 			</CardContent>
 			<CardActions disableSpacing>

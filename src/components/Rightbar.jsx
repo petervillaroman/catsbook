@@ -25,10 +25,12 @@ export const Rightbar = () => {
 				<AvatarGroup max={6}>
 					<Avatar alt='Nim Boo' src='https://i.imgur.com/NvzQcM3.jpg?1' />
 					<Avatar alt='Snoo Bo' src='https://i.imgur.com/YeqpVAo.jpg?1' />
+
 					<Avatar
 						alt='Irate Pirate'
 						src='https://i.imgur.com/cIyCNk6.jpg?1'
 					/>
+
 					<Avatar
 						alt='Penny Ghou'
 						src='https://i.imgur.com/tkedMB6.jpg?1'
