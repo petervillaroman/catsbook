@@ -10,6 +10,10 @@ import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@mui/material';
 import { React, useState } from 'react';
 function App() {
+
+	// this useState hook is for setting the theme to light and dark. 
+	// this is passed to our Sidebar component
+	// Follow us down to the side bar component vvv
 	const [mode, setMode] = useState('light');
 
 	const darkTheme = createTheme({
@@ -23,6 +27,8 @@ function App() {
 			<Box bgcolor={'background.default'} color={'text.primary'}>
 				<NavBar />
 				<Stack direction='row' spacing={2} justifyContent='space-evenly '>
+					{/* This is how we pass our state and state setter to Sidebar
+					FOLLOW US TO Sidebar.jsx to see how we receive our state/setState */}
 					<Sidebar setMode={setMode} mode={mode} />
 					<Feed />
 					<Rightbar />
